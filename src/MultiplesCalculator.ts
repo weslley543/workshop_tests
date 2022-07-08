@@ -1,14 +1,14 @@
 export default class MultiplesCalculator {
-  
+
   public calculateThreeOrFive(numberUnder: number): number {
     let sum = 0;
     for(let i= 0 ; i< numberUnder; i ++){
       if(this.isDivisiblePerThree(i) || this.isDivisiblePerFive(i)){
         sum = sum + i
       }
-      
+
     }
-    
+
     return sum
   }
   public calculateThreeAndFive(numberUnder: number): number {
@@ -28,9 +28,9 @@ export default class MultiplesCalculator {
       if((this.isDivisiblePerThree(i) || this.isDivisiblePerFive(i)) && this.isDivisiblePerSeven(i)){
         sum = sum + i
       }
-      
+
     }
-    
+
     return sum
   }
 
