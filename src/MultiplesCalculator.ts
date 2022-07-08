@@ -34,11 +34,11 @@ export default class MultiplesCalculator {
     return sum
   }
 
-  private isDivisiblePerThree(number: number): boolean {
+  public isDivisiblePerThree(number: number): boolean {
     return number % 3 === 0
   }
 
-  private isDivisiblePerFive(number: number): boolean {
+  public isDivisiblePerFive(number: number): boolean {
     return number % 5 === 0
   }
   private isDivisiblePerSeven(number: number): boolean {
