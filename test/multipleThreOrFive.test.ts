@@ -1,12 +1,12 @@
-import MultipleThreeOrFive from '../src/MultipleThreeOrFive'
+import CalculateMultiples from '../src/MultipleThreeOrFive'
 
 
 type SutTypes = {
-  sut: MultipleThreeOrFive;
+  sut: CalculateMultiples;
 }
 
 const makeSut = (): SutTypes => {
-  const sut = new MultipleThreeOrFive();
+  const sut = new CalculateMultiples();
 
   return { sut }
 }
@@ -35,5 +35,13 @@ describe('Calculate sum of three or five', () => {
     const value = sut.calculateThreeAndFive(1000);
 
     expect(value).toEqual(33165)
-  }) 
+  })
+  
+  test('expect sum of number divisible per (3 or 5) and 7 under 1000 is 33173', () => {
+    const { sut } = makeSut()
+
+    const value = sut.calculateThreeOrFiveAndSeven(1000);
+
+    expect(value).toEqual(33173)
+  })
 })
