@@ -16,8 +16,16 @@ describe('Calculate sum of three or five', () => {
   test('expect sum of number under 10 is 23', () => {
     const { sut } = makeSut()
 
-    const value = sut.calculate(10);
+    const value = sut.calculateThreeOrFive(10);
 
     expect(value).toEqual(23)
   })
+
+  test('expect sum of number under 1000 is ', () => {
+    const { sut } = makeSut()
+
+    const value = sut.calculateThreeOrFive(1000);
+
+    expect(value).toEqual(233168)
+  }) 
 })
