@@ -1,4 +1,4 @@
-export default class CalculateMultiples {
+export default class MultiplesCalculator {
   
   public calculateThreeOrFive(numberUnder: number): number {
     let sum = 0;

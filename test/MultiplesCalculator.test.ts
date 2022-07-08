@@ -1,12 +1,12 @@
-import CalculateMultiples from '../src/MultipleThreeOrFive'
+import MultiplesCalculator from '../src/MultiplesCalculator'
 
 
 type SutTypes = {
-  sut: CalculateMultiples;
+  sut: MultiplesCalculator;
 }
 
 const makeSut = (): SutTypes => {
-  const sut = new CalculateMultiples();
+  const sut = new MultiplesCalculator();
 
   return { sut }
 }
