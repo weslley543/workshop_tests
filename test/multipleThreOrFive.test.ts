@@ -21,11 +21,19 @@ describe('Calculate sum of three or five', () => {
     expect(value).toEqual(23)
   })
 
-  test('expect sum of number under 1000 is ', () => {
+  test('expect sum of number divisible per 3 or 5 under 1000 is 233168', () => {
     const { sut } = makeSut()
 
     const value = sut.calculateThreeOrFive(1000);
 
     expect(value).toEqual(233168)
+  }) 
+
+  test('expect sum of number divisible per 3 and 5 under 1000 is 33165', () => {
+    const { sut } = makeSut()
+
+    const value = sut.calculateThreeAndFive(1000);
+
+    expect(value).toEqual(33165)
   }) 
 })
