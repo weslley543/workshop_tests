@@ -2,6 +2,12 @@ import MultiplesCalculator from './MultiplesCalculator'
 import HappyNumbers from './HappyNumbers'
 import { letterValuesMap } from './constants'
 
+type SumWordType = {
+  isHappyNumber: boolean;
+  isDivisiblePerThreeOrFive: boolean;
+  isPrime: boolean;
+}
+
 export default class WordsInNumbers {
   private readonly multipleCalculator: MultiplesCalculator
   private readonly happyNumbers: HappyNumbers
@@ -11,7 +17,7 @@ export default class WordsInNumbers {
     this.happyNumbers = happyNumbers
   }
   
-  public sumWords (word: string) : any {
+  public sumWords (word: string) : SumWordType {
     const letters = word.split('')
     const sum = letters
                 .map(letter => letterValuesMap[letter].value)
